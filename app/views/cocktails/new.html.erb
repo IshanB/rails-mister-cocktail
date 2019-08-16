@@ -1,8 +1,9 @@
-<div class="container mt-5 col-6">
+<div class="container my-5 col-6">
   <h1>Add a new cocktail 🍹</h1>
     <%= simple_form_for(@cocktail) do |f| %>
       <%= f.input :name %>
-      <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+      <%= f.input :url %>
+      <%= f.submit "add a cocktail", class: "btn btn-light" %>
     <% end %>
     <br>
     <%= link_to 'Back to list', cocktails_path, class: 'btn btn-dark' %>

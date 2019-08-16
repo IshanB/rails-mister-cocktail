@@ -3,10 +3,14 @@
 
   <div class="row justify-content-between mt-3">
     <%@cocktails.each do |cocktail|%>
-      <div class="card border-light m-3" style="max-width: 18rem;">
-        <div class="card-header" style="text-align: center;"><%= link_to cocktail.name.upcase, cocktail_path(cocktail.id) %></div>
-        <img class="card-img-bottom" src="https://www.papillesetpupilles.fr/wp-content/uploads/2006/07/Mojito-%C2%A9sanneberg-shutterstock.jpg" alt="Card image cap">
-      </div>
+
+    <div class="card border-light m-3" style="max-width: 18rem;">
+      <%= link_to(cocktail_path(cocktail.id)) do %>
+        <div class="card-header" style="text-align: center;"><%= cocktail.name.upcase %></div>
+        <%= image_tag cocktail.url, alt: "Cocktail illustration", class: "card-img-bottom" %>
+      <% end %>
+    </div>
+
     <% end %>
   </div>
 

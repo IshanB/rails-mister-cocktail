@@ -1,21 +1,25 @@
 
 .card {
   background-color: transparent;
-  a {
-    text-decoration: none;
-    font-weight: lighter;
+  font-weight: lighter;
+  text-decoration:none;
+  .card-header {
+    height: 50px;
   }
-  a:hover {
+  .card-img-bottom {
+    filter: brightness(80%);
+    transition: all 0.4s ease-out;
+    border-top: 1px solid $white;
+    height: 200px;
+    object-fit: cover;
+  }
+  :hover {
     font-weight: bold;
+    text-decoration:none;
+    color: $white;
+    .card-img-bottom {
+      filter: brightness(120%);
+      transition: all 0.4s ease-in;
+    }
   }
-}
-
-.card-header {
-  height: 50px;
-}
-
-.card-img-bottom {
-  border-top: 1px solid $white;
-  height: 200px;
-  object-fit: cover;
 }

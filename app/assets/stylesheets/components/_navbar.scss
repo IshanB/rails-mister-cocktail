@@ -19,3 +19,9 @@
 .nav-link:hover {
   color: gray !important;
 }
+
+.navbar-brand {
+  font-weight: lighter;
+  color: $white !important;
+  letter-spacing: 3px;
+}
